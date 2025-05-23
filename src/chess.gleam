@@ -373,6 +373,10 @@ fn view_pre_game(model: PreGameModel) {
           [html.div([], [html.text("👤")]), html.div([], [html.text("👤")])],
         ),
         html.div(
+          [attribute.class("choose"), event.on_click(Choose(Api(model.url), Api(model.url)))],
+          [html.div([], [html.text("💻")]), html.div([], [html.text("💻")])],
+        ),
+        html.div(
           [
             attribute.class("choose"),
             event.on_click(Choose(Human, Api(model.url))),
